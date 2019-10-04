@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object Literal</title>
+    <script>
+
+    function Student(Name,Age,Semester){
+    this.age=Age;
+    this.name=Name;
+    this.Semester=Semester;
+}
+Student.prototype.program='BCS'
+
+
+obj1=new Student('Faizan',21,8);
+obj2=new Student('Adnan',23,8);
+obj3=new Student('Zeeshan',23,8);
+console.log(obj1)
+Object.defineProperty(Student.prototype, "printFunction", {
+  get() {
+    console.log(this.age + this.name + this.Semester);
+  }
+});
+obj3.printFunction
+var arr=[obj1,obj2,obj3]
+function printInfo(input){
+    for(var i=0;i<arr.length;i++){
+    if(arr[i][input]!=undefined){
+        console.log(arr[i][input])
+    }
+
+}
+}
+var input=prompt('Enter a property name');
+printInfo(input)
+    </script>
+</head>
+    <body>
+    </body>
+    </html>
