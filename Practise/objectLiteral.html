@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object Literal</title>
+    <script>
+
+    student={
+    "first name":"Faizan",
+    "last name":"",
+    "age":21,
+    printName:function(){
+        console.log(this.name)
+    }
+}
+
+student.displayAge=function(){
+    console.log(this.age)
+}
+
+
+var inp=prompt("Please enter a number")
+// student=new student()
+//console.log(student.age); //returns 21
+
+// console.log(student.last name) //gives error
+console.log(student["last"]); //returns undefined
+
+//console.log(student.inp) //gives undefined when a property does not exit
+
+console.log(student[inp])
+
+
+/*var a={age:20}
+var b=a
+b.age=30
+
+console.log("a.age="+ a.age +" b.age="+b.age)
+
+//There are some limitations of using the dot notation
+//1. When using obj.variableName it dont't take the value stored in the variable
+//2. when using obj.property name property have spaces, it won't work.
+
+function objectGenerator(name,age){
+    var std1={};
+    std1.name=name;
+    std1.age=age;
+    return std1
+}
+
+function objectusingConstructor(name,age){
+    this.age=age;
+    this.name=name;
+}
+
+obj1=objectGenerator("faizan",21)
+obj2=new objectusingConstructor("Hanzla",13)  //using Constructor
+console.log(obj1)
+console.log(obj2)
+
+
+//when using the constructor way, you don't have to create the object and no return statement
+// required. and also the object which is created will be type of that function
+
+//But in normal function way you have to create object within the function and return as well.
+
+
+//To use a function as constructor function you have to call the function with
+//new keyword
+
+
+
+//this keyword related concept
+var obj={
+    foo:function(){
+        console.log("hello")
+        console.log(this)
+    }
+}
+obj.foo()
+// in this case the context will be global
+function foo(){
+    console.log("hello")
+    console.log(this)
+}
+
+foo()
+
+
+function Constructorfoo(age){
+    this.age=age
+    console.log(this)
+    this.prop_foo= function(){console.log(this);}
+}
+
+
+obj1=new Constructorfoo(21)
+obj1.prop_foo();
+
+
+obj=Constructorfoo(21)
+obj.prop_foo() //error as there was no property attached with the obj.prop_foo
+
+
+
+
+
+
+
+
+
+*/
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
