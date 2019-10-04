@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Object Literal</title>
+    <title>Quiz 2</title>
     <script>
 
     function Student(Name,Age,Semester){
@@ -12,23 +12,38 @@
     this.name=Name;
     this.Semester=Semester;
 }
+
+
 Student.prototype.program='BCS'
 
 
 obj1=new Student('Faizan',21,8);
 obj2=new Student('Adnan',23,8);
 obj3=new Student('Zeeshan',23,8);
-console.log(obj1)
+
+
+
+console.log(obj2.name)
+
+
 Object.defineProperty(Student.prototype, "printFunction", {
   get() {
-    console.log(this.age + this.name + this.Semester);
+    console.log("Name is"+ this.name +", age is "+this.age+" and Semester is"+ this.Semester);
   }
 });
+
+
+
 obj3.printFunction
+
+
+
 var arr=[obj1,obj2,obj3]
 function printInfo(input){
     for(var i=0;i<arr.length;i++){
-    if(arr[i][input]!=undefined){
+        //To check whether the property exits
+        //if exists, either it have any value or no
+    if(input in arr[i]){
         console.log(arr[i][input])
     }
 
@@ -36,7 +51,7 @@ function printInfo(input){
 }
 var input=prompt('Enter a property name');
 printInfo(input)
-    </script>
+</script>
 </head>
     <body>
     </body>
