@@ -16,11 +16,11 @@ class MgmtStudent extends Student{
         this.industryName=industryName;
     }
 
-    set_MmgtStudentIndustry(industryName){
+    set MmgtStudentIndustry(industryName){
         this.industryName=industryName;
     }
 
-    get_MgmtStudentDetails(){
+    get MgmtStudentDetails(){
         return [this.name,this.age,this.fatherName,this.industryName];
     }
 }
@@ -31,23 +31,31 @@ class CsStudent extends Student{
     this.fypTitle=fypTitle;
     }
 
-    set_CsStudentfypTitle(fypTitle){
+    //Using ECMAScript 6 suntaxt for getter and setter
+    set CsStudentfypTitle(fypTitle){
         this.fypTitle=fypTitle;
     }
 
-    get_CsStudentDetails(){
+    get CsStudentDetails(){
         return [this.name,this.age,this.fatherName,this.fypTitle];
     }
 
 }
 
-faizan=new CsStudent('faizan khan','Niaz ur Rehman',21,'Machine learning model')
-faizan.set_CsStudentfypTitle('Machine learning model for wheat yield estimation');
+faizan=new CsStudent('XYZ','ZXY',21,'Machine learning model')
+faizan.CsStudentfypTitle='Machine learning model for wheat yield estimation';
 
-console.log(faizan.get_CsStudentDetails())
+console.log(faizan.CsStudentDetails)
+
 
 
 Tahir=new MgmtStudent('Tahir','XYZ',24,'HR');
-Tahir.set_MmgtStudentIndustry('Finance');
+Tahir.MmgtStudentIndustry='Finance';
 
-console.log(Tahir.get_MgmtStudentDetails());
+console.log(Tahir.MgmtStudentDetails);
+
+
+
+//MultiLevel Inheritence
+
+
