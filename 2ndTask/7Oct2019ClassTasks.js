@@ -56,6 +56,3 @@ console.log(Tahir.MgmtStudentDetails);
 
 
 
-//MultiLevel Inheritence
-
-
