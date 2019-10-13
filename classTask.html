@@ -7,7 +7,7 @@
     <title>Quiz 2</title>
     <script>
 
-    function Student(Name,Age,Semester){
+    function Student(Name,Age,Semester,){
     this.age=Age;
     this.name=Name;
     this.Semester=Semester;
@@ -23,7 +23,7 @@ obj3=new Student('Zeeshan',23,8);
 
 
 
-console.log(obj2.name)
+
 
 //Adding a method to Student Prototype using defineProperty method
 Object.defineProperty(Student.prototype, "printFunction", {

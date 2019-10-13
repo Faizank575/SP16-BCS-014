@@ -10,9 +10,6 @@ class Student{
         this.RegNo=RegNo;
         this.Program=Program;
     }
-
-
-
 }
 
 let Faculty = {

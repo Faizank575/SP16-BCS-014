@@ -1,8 +1,15 @@
+//Function overloading is not possible in JS because of
+//does not type the check of arguments
+//does not check the number of arguments
+
 class Student{
     constructor(name,fatherName,age){
         this.name=name;
         this.age=age;
         this.fatherName=fatherName
+    }
+    getDetails(){
+        console.log(this.name)
     }
 }
 
@@ -21,36 +28,15 @@ class MgmtStudent extends Student{
     get MgmtStudentDetails(){
         return [this.name,this.age,this.fatherName,this.industryName];
     }
+
+    getDetails(name){
+        console.log(name)
+    }
 }
-
-class CsStudent extends Student{
-    constructor(name,fatherName,age,fypTitle){
-    super(name,fatherName,age);
-    this.fypTitle=fypTitle;
-    }
-
-    //Using ECMAScript 6 suntaxt for getter and setter
-    set CsStudentfypTitle(fypTitle){
-        this.fypTitle=fypTitle;
-    }
-
-    get CsStudentDetails(){
-        return [this.name,this.age,this.fatherName,this.fypTitle];
-    }
-
-}
-
-faizan=new CsStudent('XYZ','ZXY',21,'Machine learning model')
-faizan.CsStudentfypTitle='Machine learning model for wheat yield estimation';
-
-console.log(faizan.CsStudentDetails)
-
-
 
 Tahir=new MgmtStudent('Tahir','XYZ',24,'HR');
 Tahir.MmgtStudentIndustry='Finance';
-
-console.log(Tahir.MgmtStudentDetails);
-
-
+Tahir.getDetails("Tahir") // the child class is being checked for function first if
+//not exist then look in parent
+Tahir.getDetails()// overloading is not allowed
 
