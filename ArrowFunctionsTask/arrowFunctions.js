@@ -64,6 +64,7 @@ console.log(value(2)) //Now this variable will be referring to the outerFunction
 
 
 
+// Regular Vs Arrow Functions in Objects
 
 var foo={
     name:'khan',
@@ -94,6 +95,65 @@ var anotherfoo={
 anotherfoo.func() // But in case of arrow function, it will point to the window Object
                  // and as we have added a name variable to Window Object,
                  //it will also print Faizan 
+
+
+ const person = {
+                points: 23,
+                score() {
+                      return this.points++; // this keyword refers to person object
+                }
+                };
+                  
+ console.log(person.score());
+
+
+ const person1 = {
+    points: 23,
+    score: () => {    // using arrow function to define score method
+      return this.points++; // this keyword refers to window object
+    }
+  };
+  
+  console.log(person1.score());
+
+
+// Regular vs Arrow Functions in Classes
+
+  class Dog {
+    constructor(name, bread) {
+      this.name = name;
+      this.bread = bread;
+      // functions
+      }
+      bark = () => {
+        return `Bark Bark! My name is ${this.name}`;
+
+    }
+  }
+  const mini = new Dog('Mini', 'Spitz');
+  DogFunc=mini.bark
+  console.log(mini.bark());//Bark Bark! My name is Mini
+
+  console.log(DogFunc()) //Bark Bark! My name is Mini
+
+
+
+  class Dog1 {
+    constructor(name, bread) {
+      this.name = name;
+      this.bread = bread;
+      
+    }
+    // functions
+    bark(){
+        return `Bark Bark! My name is ${this.name}`;
+      }
+  }
+  const mini1 = new Dog1('Mini', 'Spitz');
+  Dog1Func=mini1.bark
+  console.log(mini1.bark()); //Bark Bark! My name is Mini
+
+  console.log(Dog1Func()) //This gives Error Cannot read property 'name' of undefined
 
 
 
