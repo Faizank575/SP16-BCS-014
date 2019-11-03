@@ -120,9 +120,9 @@ anotherfoo.func() // But in case of arrow function, it will point to the window 
 // Regular vs Arrow Functions in Classes
 
   class Dog {
-    constructor(name, bread) {
+    constructor(name, breed) {
       this.name = name;
-      this.bread = bread;
+      this.breed = breed;
       // functions
       }
       bark = () => {
@@ -139,9 +139,9 @@ anotherfoo.func() // But in case of arrow function, it will point to the window 
 
 
   class Dog1 {
-    constructor(name, bread) {
+    constructor(name, breed) {
       this.name = name;
-      this.bread = bread;
+      this.breed = breed;
       
     }
     // functions
